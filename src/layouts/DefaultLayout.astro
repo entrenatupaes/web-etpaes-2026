@@ -5,8 +5,6 @@ import SiteMeta from '@components/SiteMeta.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import { ClientRouter } from 'astro:transitions'
-import { inject } from '@vercel/analytics'
-import { injectSpeedInsights } from '@vercel/speed-insights'
 
 const {
   title = 'Accessible Astro',
@@ -15,9 +13,6 @@ const {
   image = 'social-preview-image.png',
   author = 'Incluud',
 } = Astro.props
-
-inject()
-injectSpeedInsights()
 ---
 
 <html lang="en" dir="ltr">
@@ -40,6 +35,13 @@ injectSpeedInsights()
       <slot />
     </main>
     <Footer />
+    <script>
+      import { inject } from '@vercel/analytics'
+      import { injectSpeedInsights } from '@vercel/speed-insights'
+
+      inject()
+      injectSpeedInsights()
+    </script>
     <style lang="scss" is:global>
       @use '../assets/scss/base/mixins' as *;
 
