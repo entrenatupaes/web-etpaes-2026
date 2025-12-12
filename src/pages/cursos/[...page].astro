@@ -50,11 +50,11 @@ console.log(page.lastPage)
 ---
 
 <DefaultLayout
-  title="Portfolio"
+  title="Cursos"
   description="A showcase of projects built with Astro Content Collections, demonstrating dynamic content management."
 >
   <PageHeader
-    title="Portfolio"
+    title="Cursos"
     subtitle='A showcase of projects built with Astro Content Collections, demonstrating dynamic content management and organization. Learn more about <a href="https://docs.astro.build/en/guides/content-collections/">Astro Content Collections</a> in the official documentation.'
     bgType="bordered"
   />
@@ -64,7 +64,7 @@ console.log(page.lastPage)
       <div class="flex flex-wrap gap-4">
         {
           uniqueTags.map((tag: { label: string; slug: string }) => (
-            <Link href={'/portfolio/tag/' + tag.slug}>{tag.label}</Link>
+            <Link href={'/cursos/tag/' + tag.slug}>{tag.label}</Link>
           ))
         }
       </div>
@@ -77,7 +77,7 @@ console.log(page.lastPage)
             <li>
               <Card
                 imageComponent={project.featuredImage}
-                url={'/portfolio/' + project.id}
+                url={'/cursos/' + project.id}
                 title={project.data.title}
                 headingLevel="h2"
                 footer={'Author: ' + project.data.author}
@@ -98,13 +98,13 @@ console.log(page.lastPage)
         page && page.lastPage > 1 && (
           <div class="mt-12 grid place-content-center">
             <Pagination
-              firstPage={page.url.prev ? '/portfolio' : null}
+              firstPage={page.url.prev ? '/cursos' : null}
               previousPage={page.url.prev ? page.url.prev : null}
               nextPage={page.url.next ? page.url.next : null}
-              lastPage={page.url.next ? `/portfolio/${page.lastPage}` : null}
+              lastPage={page.url.next ? `/cursos/${page.lastPage}` : null}
               currentPage={`${page.currentPage}`}
               totalPages={`${page.lastPage}`}
-              ariaLabel="Portfolio pagination"
+              ariaLabel="Cursos pagination"
             />
           </div>
         )

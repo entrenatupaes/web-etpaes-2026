@@ -20,8 +20,8 @@ const staticPages = [
     description: 'A comprehensive showcase of accessible UI components and design patterns for modern web development.',
   },
   {
-    title: 'Portfolio',
-    url: '/portfolio',
+    title: 'Cursos',
+    url: '/cursos',
     description: 'A collection of projects demonstrating accessible design and development practices.',
   },
   {
@@ -30,8 +30,8 @@ const staticPages = [
     description: 'Articles and insights about web accessibility, development best practices, and inclusive design.',
   },
   {
-    title: 'Contact',
-    url: '/contact',
+    title: 'Contacto',
+    url: '/contacto',
     description:
       'Get in touch with us for accessibility consulting, development services, or collaboration opportunities.',
   },
@@ -100,7 +100,7 @@ const staticPages = [
 
       <!-- Portfolio Projects Section -->
       <div>
-        <Heading level="h2">Portfolio projects</Heading>
+        <Heading level="h2">Cursos projects</Heading>
         <p class="mb-6">
           Explore our collection of {projects.length} accessibility-focused projects showcasing inclusive design and development
           practices.
@@ -110,7 +110,7 @@ const staticPages = [
             projects.map((project) => (
               <article>
                 <Heading level="h3" size="h6" class="mb-3">
-                  <a href={`/portfolio/${project.id}`}>{project.data.title}</a>
+                  <a href={`/cursos/${project.id}`}>{project.data.title}</a>
                 </Heading>
                 <p class="mb-3">{project.data.description}</p>
                 <div class="text-xs">
@@ -120,7 +120,7 @@ const staticPages = [
                   <p>
                     URL:{' '}
                     <code class="rounded bg-neutral-100 px-1 py-0.5 text-xs text-neutral-500 dark:bg-neutral-800 dark:text-neutral-500">
-                      /portfolio/{project.id}
+                      /cursos/{project.id}
                     </code>
                   </p>
                 </div>

@@ -14,52 +14,55 @@ import { Icon } from 'astro-icon/components'
   <Hero />
   <section class="my-64">
     <div class="container">
-      <Heading level="h2" class="mb-8">Features</Heading>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <Heading level="h2" class="mb-8">Nuestras claves</Heading>
+       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+         {/*
         <Feature icon="lucide:accessibility" title="Accessible by default">
           Keyboard navigation, focus indicators, ARIA labels, semantic HTML, and more. This theme is designed to be
           inclusive.
         </Feature>
-        <Feature icon="lucide:puzzle" title="A11Y components">
+        <Feature icon="lucide:blocks" title="A11Y components">
           25+ components and counting, all tried and tested for the most optimal accessible experience for your
           visitors.
         </Feature>
         <Feature icon="lucide:moon" title="Dark mode">
           Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
         </Feature>
-        <Feature icon="lucide:paintbrush" title="Tailwind 4.0">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+
+        */}
+        <Feature icon="lucide:brain" title="Aprende con Flexibilidad">
+          Administra tu tiempo como prefieras,asiste  las clases en vivo o revisa las grabaciones.
         </Feature>
-        <Feature icon="lucide:sparkles" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        <Feature icon="lucide:trophy" title="Enfoque en Resultados">
+          Cuentanos tu objetivo y trazamos un plan para lograrlo.
         </Feature>
-        <Feature icon="lucide:code" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        <Feature icon="lucide:calendar-heart" title="Calendario Amigable">
+          No hacemos maratones de 8 horas seguidas, preferimos un estudio acotado pero constante en el tiempo.
         </Feature>
-        <Feature icon="lucide:bookmark" title="Blog & portfolio">
-          This theme comes with a fully integrated blog and portfolio, dynamic pages and SEO optimization.
+
+        <Feature icon="lucide:clipboard-check" title="Metodologia Probada">
+          Profesores con experiencia entrenando Puntajes Nacionales.
         </Feature>
-        <Feature icon="lucide:file-text" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
+        <Feature icon="lucide:notebook-tabs" title="Banco de Material de Estudio">
+          Mucho, pero mucho material de estudio disponible sin costo extra.
         </Feature>
-        <Feature icon="lucide:blocks" title="Design system">
-          The theme offers some very handy utilities to help you build your website faster.
+        <Feature icon="lucide:message-square-more" title="Comunidad de Discord/Whatsapp">
+          Comunidad de estudiantes y profesores compartiendo datos PAES, material de estudio y resolucion de dudas..
         </Feature>
       </div>
     </div>
   </section>
   <ContentMedia imgSrc="/accessible-components.webp">
-    <Heading level="h2">Accessible components</Heading>
+    <Heading level="h2">Cursos de Verano</Heading>
     <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <Link
+      Cursos cortos e intensivos. Enfocados principalmente en nivelar, subsanar lagunas y consolidar una base de conocimientos fuerte y robusta, abarcando los <Link
         isExternal
-        href="https://github.com/incluud/accessible-astro-components">separate package</Link
-      >. They'll get you up and running in building an accessible solution for your visitors.
+        href="https://github.com/incluud/accessible-astro-components">Temarios PAES.</Link
+      >De esta manera, luego puedes dedicarte a ejercitar con tranquilidad de contar con los conocimientos necesarios.
     </p>
   </ContentMedia>
   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <Heading level="h2">WCAG 2.2 AA compliant</Heading>
+    <Heading level="h2">Cursos Anuales</Heading>
     <p class="text-2xl">
       Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
       navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
@@ -71,14 +74,14 @@ import { Icon } from 'astro-icon/components'
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
-        <Heading level="h2">FAQ</Heading>
+        <Heading level="h2">Preguntas Frecuentes</Heading>
         <p class="text-2xl">
-          This section demonstrates how to effectively use the Accordion component to organize and display frequently
-          asked questions in an accessible and user-friendly way.
+            This section demonstrates how to effectively use the Accordion component to organize and display frequently
+            asked questions in an accessible and user-friendly way.
         </p>
         <Link href="/faq" isButton type="primary" animateOnHover animationType="boop">
           <Icon aria-hidden="true" name="lucide:headset" size=" 1.5rem" />
-          Contact support team
+          Contáctanos al WS!
         </Link>
       </div>
       <div class="space-content">
@@ -129,6 +132,8 @@ import { Icon } from 'astro-icon/components'
       </div>
     </div>
   </section>
+
+  {/*
   <section class="my-64">
     <div class="space-content container">
       <Heading level="h2">Our community</Heading>
@@ -149,12 +154,14 @@ import { Icon } from 'astro-icon/components'
       </AvatarGroup>
     </div>
   </section>
+
+  */}
   <section class="mt-64 mb-32">
     <div class="container">
       <Heading level="h2" class="mb-16">Impact in numbers</Heading>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="900+" title="Stars" sub="On GitHub" />
-        <Counter count="25+" title="Accessible" sub="Components" />
+        <Counter count="+500" title="Estudiantes" sub="alcanzados" />
+        <Counter count="+8 años" title="Entrenando" sub="PSU/PDT/PAES" />
         <Counter count="400+" title="Commits" sub="Merged" />
         <Counter count="48+" title="Months" sub="Since launch" />
       </div>

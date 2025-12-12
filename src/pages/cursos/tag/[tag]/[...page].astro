@@ -66,12 +66,12 @@ const { page, currentTag, uniqueTags } = Astro.props
 ---
 
 <DefaultLayout
-  title={`Portfolio - ${currentTag.label}`}
+  title={`Cursos - ${currentTag.label}`}
   description={`Projects filtered by ${currentTag.label} tag. Discover our work in ${currentTag.label} and related technologies.`}
 >
   <PageHeader
-    title={`Portfolio: ${currentTag.label}`}
-    subtitle={`Showing ${page.total} project${page.total !== 1 ? 's' : ''} tagged with "${currentTag.label}". <a href="/portfolio">View all projects</a> or filter by other tags below.`}
+    title={`Cursos: ${currentTag.label}`}
+    subtitle={`Showing ${page.total} project${page.total !== 1 ? 's' : ''} tagged with "${currentTag.label}". <a href="/cursos">View all projects</a> or filter by other tags below.`}
     bgType="bordered"
     customBreadcrumbLabels={{
       [currentTag.slug]: currentTag.label,
@@ -82,16 +82,16 @@ const { page, currentTag, uniqueTags } = Astro.props
     <div class="container">
       <Heading level="h2" size="h5" class="mb-2">Tags</Heading>
       <div class="flex flex-wrap gap-4">
-        <Link href="/portfolio">All projects</Link>
+        <Link href="/cursos">All projects</Link>
         {
           uniqueTags.map((tag: { label: string; slug: string }) => {
             const isCurrentTag = tag.slug === currentTag.slug
             return isCurrentTag ? (
-              <Link href={'/portfolio/tag/' + tag.slug} disabled class="disabled">
+              <Link href={'/cursos/tag/' + tag.slug} disabled class="disabled">
                 {tag.label}
               </Link>
             ) : (
-              <Link href={'/portfolio/tag/' + tag.slug}>{tag.label}</Link>
+              <Link href={'/cursos/tag/' + tag.slug}>{tag.label}</Link>
             )
           })
         }
@@ -109,7 +109,7 @@ const { page, currentTag, uniqueTags } = Astro.props
             <li>
               <Card
                 imageComponent={project.featuredImage}
-                url={'/portfolio/' + project.id}
+                url={'/cursos/' + project.id}
                 title={project.data.title}
                 headingLevel="h2"
                 footer={'Author: ' + project.data.author}
@@ -133,13 +133,13 @@ const { page, currentTag, uniqueTags } = Astro.props
         page && page.lastPage > 1 && (
           <div class="mt-12 grid place-content-center">
             <Pagination
-              firstPage={page.url.prev ? `/portfolio/tag/${currentTag.slug}` : null}
+              firstPage={page.url.prev ? `/cursos/tag/${currentTag.slug}` : null}
               previousPage={page.url.prev ? page.url.prev : null}
               nextPage={page.url.next ? page.url.next : null}
-              lastPage={page.url.next ? `/portfolio/tag/${currentTag.slug}/${page.lastPage}` : null}
+              lastPage={page.url.next ? `/cursos/tag/${currentTag.slug}/${page.lastPage}` : null}
               currentPage={`${page.currentPage}`}
               totalPages={`${page.lastPage}`}
-              ariaLabel={`${currentTag.label} portfolio pagination`}
+              ariaLabel={`${currentTag.label} cursos pagination`}
             />
           </div>
         )
