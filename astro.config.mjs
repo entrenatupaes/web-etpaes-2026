@@ -75,7 +75,7 @@ if (isLinked) {
           })
 
           // Trigger full page reload
-          server.ws.send({ type: 'full-reload', path: '*' })
+          server.hot.send({ type: 'full-reload', path: '*' })
         }
       })
 
