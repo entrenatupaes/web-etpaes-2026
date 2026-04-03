@@ -57,6 +57,7 @@ export default [
       ...astro.configs.recommended.rules,
       ...astro.configs['jsx-a11y-strict'].rules,
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z]' }],
     },
   },
 
